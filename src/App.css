@@ -36,3 +36,25 @@
     transform: rotate(360deg);
   }
 }
+
+.edit-container {
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-fields {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.invalid-user {
+  color: red;
+  text-align: center;
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+}
