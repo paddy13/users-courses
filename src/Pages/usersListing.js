@@ -1,4 +1,4 @@
-//Imports arranged alphabatically
+//Imports arranged alphabetically
 import '../App.css';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
@@ -24,7 +24,7 @@ function UsersListing() {
   const isLoading = useSelector(({usersData}) => usersData.isLoading)
   const users = useSelector(({usersData}) => usersData.users, shallowEqual)
 
-  // Dispatching FetchUser action after the component is renderred
+  // Dispatching FetchUser action after the component is rendered
   useEffect(() => {
     dispatch(fetchUsers())
   }, [dispatch])
