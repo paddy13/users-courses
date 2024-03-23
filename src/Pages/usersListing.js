@@ -1,19 +1,19 @@
 //Imports arranged alphabatically
-import './App.css';
+import '../App.css';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import ModalPopUp from './Pages/modalPopUp';
+import ModalPopUp from './modalPopUp';
 import Spinner from 'react-bootstrap/Spinner';
 import Table from 'react-bootstrap/Table';
 
 import { ArrowDown } from 'react-bootstrap-icons';
 import { ArrowUp } from 'react-bootstrap-icons';
-import { fetchUsers, sortUsers } from './Redux/Slice/userSlice';
+import { fetchUsers, sortUsers } from '../Redux/Slice/userSlice';
 import { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { useDispatch, shallowEqual, useSelector } from 'react-redux';
 
-function App() {
+function UsersListing() {
   const dispatch = useDispatch()
   const navigate = useNavigate()
 
@@ -106,4 +106,4 @@ function App() {
   );
 }
 
-export default App;
+export default UsersListing;

@@ -1,12 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
-import App from "../App";
+import UsersListing from "../Pages/usersListing";
 import Courses from "../Pages/courses";
 import NotFoundPage from "../Pages/notFoundPage";
 
 export default createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <UsersListing />,
   },
   {
     path: "/view-courses/:id",
