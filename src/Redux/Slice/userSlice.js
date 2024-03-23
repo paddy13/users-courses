@@ -14,8 +14,11 @@ const userSlice = createSlice({
   name: 'users',
   initialState: {
     isLoading: false,
-    users: null,
-    selectedUser: []
+    users: [],
+    selectedUser: [],
+    usersToDisplay: [],
+    usersPerPage: 12,
+    currentPage: 1
   },
   reducers: (create) => ({
     sortUsers: create.reducer((state, action) => {
@@ -29,10 +32,19 @@ const userSlice = createSlice({
       const index = state.users.findIndex((user) => user.id === action.payload.id)
       state.users.splice(index, 1, action.payload)
     }),
+    fetchNextPageUsers: create.reducer((state, action) => {
+      if(action.payload.page === 'next') {
+        state.currentPage = action.payload.currentPage + 1
+      } else {
+        state.currentPage = action.payload.currentPage - 1
+      }
+      state.usersToDisplay = state.users.slice((state.usersPerPage * state.currentPage) - state.usersPerPage, state.usersPerPage * state.currentPage)
+    }),
   }),
   extraReducers: (builder) => {
     builder.addCase(fetchUsers.fulfilled, (state, action) => {
       state.users = action.payload.users
+      state.usersToDisplay = state.users.slice((state.usersPerPage * state.currentPage) - state.usersPerPage, state.usersPerPage * state.currentPage)
       state.isLoading = false
     })
     builder.addCase(fetchUsers.pending, (state) => {
@@ -50,4 +62,4 @@ const userSlice = createSlice({
 
 export default userSlice.reducer
 
-export const { sortUsers, updateUser } = userSlice.actions
+export const { sortUsers, updateUser, fetchNextPageUsers } = userSlice.actions

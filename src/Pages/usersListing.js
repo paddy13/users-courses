@@ -3,6 +3,7 @@ import '../App.css';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import ModalPopUp from './modalPopUp';
+import PaginationPage from './paginationPage';
 import Spinner from 'react-bootstrap/Spinner';
 import Table from 'react-bootstrap/Table';
 
@@ -22,7 +23,7 @@ function UsersListing() {
 
   // Fetching users data from Store
   const isLoading = useSelector(({usersData}) => usersData.isLoading)
-  const users = useSelector(({usersData}) => usersData.users, shallowEqual)
+  const users = useSelector(({usersData}) => usersData.usersToDisplay, shallowEqual)
 
   // Dispatching FetchUser action after the component is rendered
   useEffect(() => {
@@ -99,6 +100,9 @@ function UsersListing() {
           })}
         </tbody>
       </Table>
+      <div className="pagination">
+        <PaginationPage />
+      </div>
       <Modal show={show} onHide={handleModalClose}>
         <ModalPopUp user={selectedUser} onCloseBtn={handleModalClose}/>
       </Modal>
