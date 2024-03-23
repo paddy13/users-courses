@@ -1,12 +1,12 @@
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import reportWebVitals from './reportWebVitals';
-import { Provider } from 'react-redux';
-import { store } from './Redux/store';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import { RouterProvider } from 'react-router-dom';
 import routes from './Routes';
+import { Provider } from 'react-redux';
+import { RouterProvider } from 'react-router-dom';
+import { store } from './Redux/store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

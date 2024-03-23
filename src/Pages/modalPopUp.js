@@ -42,31 +42,31 @@ function ModalPopUp({user, onCloseBtn}) {
         <div className='edit-container'>
           <div className='input-fields'>
             <label htmlFor='role'> Role </label>
-            <input type='text' value={role} onChange={(e) => setRole(e.target.value)}/>
+            <input id="role" type='text' value={role} onChange={(e) => setRole(e.target.value)}/>
           </div>
           <div className='input-fields'>
-            <label htmlFor='role'> City </label>
-            <input type='text' value={city} onChange={(e) => setCity(e.target.value)} />
+            <label htmlFor='city'> City </label>
+            <input id="city" type='text' value={city} onChange={(e) => setCity(e.target.value)} />
           </div>
           <div className='input-fields'>
-            <label htmlFor='role'> Address </label>
-            <input type='text' value={address} onChange={(e) => setAddress(e.target.value)} />
+            <label htmlFor='address'> Address </label>
+            <input id="address" type='text' value={address} onChange={(e) => setAddress(e.target.value)} />
           </div>
           <div className='input-fields'>
-            <label htmlFor='role'> Phone </label>
-            <input type='text' value={phone} onChange={(e) => setPhone(e.target.value)} />
+            <label htmlFor='phone'> Phone </label>
+            <input id="phone" type='text' value={phone} onChange={(e) => setPhone(e.target.value)} />
           </div>
           <div className='input-fields'>
-            <label htmlFor='role'> Email </label>
-            <input type='text' value={email} onChange={(e) => setEmail(e.target.value)} />
+            <label htmlFor='email'> Email </label>
+            <input id="email" type='text' value={email} onChange={(e) => setEmail(e.target.value)} />
           </div>
           <div className='input-fields'>
-            <label htmlFor='role'> Name </label>
-            <input type='text' value={name} onChange={(e) => setName(e.target.value)} />
+            <label htmlFor='name'> Name </label>
+            <input id="name" type='text' value={name} onChange={(e) => setName(e.target.value)} />
           </div>
           <div className='input-fields'>
-            <label htmlFor='role'> Username </label>
-            <input type='text' value={username} onChange={(e) => setUserName(e.target.value)} />
+            <label htmlFor='username'> Username </label>
+            <input id="username" type='text' value={username} onChange={(e) => setUserName(e.target.value)} />
           </div>
         </div>
       </Modal.Body>

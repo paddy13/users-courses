@@ -52,5 +52,4 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
     - Displayed a message to the user if no courses are found for a particular user.
 
 ## ToDo
-1. Pagination
-2. Additional filters or sort can be added on the fields
+1. Additional filters or sort can be added on the fields
