@@ -22,8 +22,7 @@ function UsersListing() {
 
   // Fetching users data from Store
   const isLoading = useSelector(({usersData}) => usersData.isLoading)
-  // const users = useSelector(({usersData}) => usersData.users, shallowEqual)
-  const users = useSelector(({usersData}) => usersData.visibleOnPage, shallowEqual)
+  const users = useSelector(({usersData}) => usersData.users, shallowEqual)
 
   // Dispatching FetchUser action after the component is renderred
   useEffect(() => {
