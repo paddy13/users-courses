@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# Getting Started with User Courses App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Prequisite
+- Node 19.7 or higher
+- npm 9.5 or higher
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
+## Setup
+1. git clone {repo-url}
+2. cd users-courses
+3. npm install
+4. npm start
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Walkthrough Video
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tech Stack
+1. React JS
+2. Redux
+3. React Router
+4. Bootstrap
 
-### `npm run build`
+## Features Added
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Display Users Listing in a Table:
+    - Users' information is presented in a table format.
+    - Each user entry includes options to "Edit User" and "View Courses".
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Course Details for Users:
+    - Clicking on "View Courses" redirects users to a dedicated page showing the courses associated with the selected user.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Edit User Information:
+    - Users can edit their information via a modal window.
+    - After saving the changes, the updated user details are reflected in the users' listing.
 
-### `npm run eject`
+## Additional Features
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Loading Spinner:
+    - Implemented a loading spinner to indicate that data is being fetched from APIs.
+    - Enhances user experience by providing visual feedback during data retrieval.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. Sorting by Name:
+    - Added a sorting feature on the "Name" field in the user listing.
+    - Clicking the arrow up or down sorts the user listing accordingly, enhancing usability.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. Error Handling:
+    - Redirected to a "Not Found" page for any incorrect URLs.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. User Feedback for Empty Courses:
+    - Displayed a message to the user if no courses are found for a particular user.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## ToDo
+1. Pagination
+2. Additional filters or sort can be added on the fields
