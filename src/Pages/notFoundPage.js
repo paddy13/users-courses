@@ -1,13 +1,11 @@
-import { Link } from "react-router-dom";
+import Alert from 'react-bootstrap/Alert';
 
 const Courses = () => {
-
-    return (
-        <div>
-            <h1>Page not found</h1>
-            <Link to="/">Go to home</Link>
-        </div>
-    )
+  return (
+    <Alert className="invalid-user" variant={"danger"}>
+      Page not found <Alert.Link href="/">Got to Home</Alert.Link>
+    </Alert>
+  )
 }
 
 export default Courses;
