@@ -23,7 +23,7 @@ const Courses = () => {
   if(selectedUser.length === 0) {
     return (
       <Alert className="invalid-user" variant={"warning"}>
-        Oopss!! I think you have selected a wrong user!! <Alert.Link href="/">Got to Home</Alert.Link>
+        Oopss!! I think you have selected a wrong user!! <Alert.Link href="/">Go to Home</Alert.Link>
       </Alert>
     )
   }
