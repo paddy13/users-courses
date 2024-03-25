@@ -31,15 +31,7 @@ const userSlice = createSlice({
     updateUser: create.reducer((state, action) => {
       const index = state.users.findIndex((user) => user.id === action.payload.id)
       state.users.splice(index, 1, action.payload)
-    }),
-    fetchNextPageUsers: create.reducer((state, action) => {
-      if(action.payload.page === 'next') {
-        state.currentPage = action.payload.currentPage + 1
-      } else {
-        state.currentPage = action.payload.currentPage - 1
-      }
-      state.usersToDisplay = state.users.slice((state.usersPerPage * state.currentPage) - state.usersPerPage, state.usersPerPage * state.currentPage)
-    }),
+    })
   }),
   extraReducers: (builder) => {
     builder.addCase(fetchUsers.fulfilled, (state, action) => {
