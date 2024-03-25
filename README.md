@@ -35,10 +35,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
     - Users can edit their information via a modal window.
     - After saving the changes, the updated user details are reflected in the users' listing.
 
-4. Pagination:
-    - Added pagination at the bottom of the page
-    - App is calculating the last page dynamically. So there will be no issue if users list gets big.
-
 ## Additional Features
 
 1. Loading Spinner:
