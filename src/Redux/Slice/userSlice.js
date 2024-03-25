@@ -54,4 +54,4 @@ const userSlice = createSlice({
 
 export default userSlice.reducer
 
-export const { sortUsers, updateUser, fetchNextPageUsers } = userSlice.actions
+export const { sortUsers, updateUser } = userSlice.actions
